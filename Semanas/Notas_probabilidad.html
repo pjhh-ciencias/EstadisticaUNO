@@ -336,8 +336,263 @@
       </div>
 
 
+      <h1 class="title flexbox_"> Variables aleatorias</h1>
+
+      <div class="nota-box"><h2 class="number-title"> Introducción</h2>
+      <p>A grandes rasgos, una variable aleatoria es una función que actúa sobre un espacio de probabilidad 
+        $(\Omega, \mathscr{F}, \mathbb{P})$ y devuelve valores numéricos. Sin embargo, <strong>no cualquier</strong>
+        función puede considerarse una variable aleatoria. Básicamente, una función será una variable aleatoria si 
+        algunas de sus imágenes inversas son <strong>eventos de $\Omega$</strong>. Esto garantizará que se puede calcular 
+        la probabilidad de sus valores, y por tanto, podremos calcular la probabilidad de que la variable aleatoria tome
+        valores específicos.
+      </p>
+
+      <p>Sea $(\Omega, \mathscr{F}, \mathbb{P})$ un espacio de probabilidad. Es posible que nos interese algún valor 
+        numérico asociado a los resultados del experimento en cuestión.</p>
+      </div>
+
+      <div class="nota-box"><h2 class="number-title"> Ejemplo</h2>
+        <p>Consideremos el experimento de lanzar una moneda $4$ veces de <b> manera equiprobable</b>, 
+          sabemos que su espacio muestral es:
+        </p>
+
+        <p>\[
+        \Omega = 
+        \begin{Bmatrix}
+        \mathrm{AAAA}, &amp; \mathrm{AAAS}, &amp; \mathrm{AASA}, &amp; \mathrm{ASAA}, \\
+        \mathrm{SAAA}, &amp; \mathrm{AASS}, &amp; \mathrm{ASAS}, &amp; \mathrm{SAAS}, \\
+        \mathrm{ASSA}, &amp; \mathrm{SASA}, &amp; \mathrm{SSAA}, &amp; \mathrm{SSSA}, \\
+        \mathrm{SSAS}, &amp; \mathrm{SASS}, &amp; \mathrm{ASSS}, &amp; \mathrm{SSSS}
+        \end{Bmatrix}.
+        \]
+        </p>
+
+        <p>y tomamos a $\mathscr{P}(\Omega)$ como σ-álgebra, y como medida a la medida de probabilidad clásica.</p>
+
+        <p>Una variable asociada a este experimento es <strong>la cantidad de águilas que salieron en los $4$ lanzamientos</strong>.
+          Esto podríamos definirlo como una <strong>función</strong> $X\colon \Omega \rightarrow \mathbb{R}$, tal que para cada $\omega \in \Omega$ 
+          se define:
+        </p>
+
+        <p>\[ X(\omega) = \text{# de $\mathrm{A}$&#8217;s en $\omega$}. \]</p>
+
+        <p>De este modo, se tiene que</p>
+
+        <p>
+        \begin{align*}
+        X(\mathrm{AAAS}) &= 3, \\
+        X(\mathrm{ASAS}) &= 2,\\
+        &  \hspace{0.45cm}\vdots\\
+        X(\mathrm{ASSS}) &= 1, \\
+        X(\mathrm{AAAA}) &= 4,
+        \end{align*}
+        </p>        
+
+        <p>Al ser una función, $X$ tiene todas las cualidades y propiedades de una función que viste en <strong>álgebra superior</strong>. 
+          En particular, hay un concepto que nos interesa mucho: la <strong>imagen inversa</strong> de cada uno de los valores que
+          toma $X$. 
+        </p>
+
+        <p>Recordemos que dado $B \subseteq \mathbb{R}$, la <strong>imagen inversa de $B$ bajo $X$</strong> es el 
+          conjunto:
+        
+          \[ X^{-1}[B] = \{ \, \omega \in \Omega \mid X(\omega) \in B \, \}. \]
+        </p>
+
+        <p>Cuando $B$ es un conjunto de la forma $B = \{ x \}$, con $x \in \mathbb{R}$, se tiene que</p>
+
+        <p>\[ X^{-1}[\{x \}] = \{ \, \omega \in \Omega \mid X(\omega) = x \, \}. \]</p>
+
+        <p>Por ejemplo, para la función $X$ como la definimos, podemos observar que:
+
+        \[ X^{-1}[\{ 2 \}] = \{ \, \omega \in \Omega \mid X(\omega) = 2 \, \} = \{ \mathrm{AASS}, \mathrm{ASAS}, \mathrm{SAAS}, \mathrm{ASSA}, \mathrm{SASA}, \mathrm{SSAA} \}. \]</p>
+
+        <p>Ahora, observa que $X^{-1}[{ 2 }] \in \mathscr{P}(\Omega)$, por lo que <strong>le podemos asignar una 
+          probabilidad</strong>. En consecuencia, se tiene que
+
+        \begin{align*} \mathbb{P}(X^{-1}[\{ 2 \}]) = \mathbb{P}(\{ \, \omega \in \Omega \mid X(\omega) = 2 \, \}) &amp;= \frac{|\{ \mathrm{AASS}, \mathrm{ASAS}, \mathrm{SAAS}, \mathrm{ASSA}, \mathrm{SASA}, \mathrm{SSAA} \}|}{|\Omega|} \\ &amp;= \frac{6}{16} \\[1.15em] &amp;= 0.375. \end{align*}</p>
+
+        <p>Gracias a esto, podemos decir que «la probabilidad de que $X$ tome el valor $2$ es $\frac{6}{16} = 0.375$».</p>
+
+        <p>Por lo tanto, <strong>le podemos asignar probabilidad a los posibles resultados de $X$</strong>.</p>
 
 
-    
+        <p>Una <strong>notación</strong> muy frecuente en el contexto de la probabilidad es la siguiente: usaremos 
+          $(X \in B)$ para <strong>denotar</strong> a $\{ \, \omega \in \Omega \mid X(\omega) \in B \,\} = X^{-1}[B]$, 
+          de tal forma que
 
+          \[ \mathbb{P}(\{ \, \omega \in \Omega \mid X(\omega) \in B \,\}) = \mathbb{P}(X \in B). \]
+        </p>
+
+        <p>Similarmente, cuando $B = \{x\}$, con $x \in \mathbb{R}$, se adopta la notación $( X = x )$ para <strong>denotar</strong> al conjunto $\{ \, \omega \in \Omega \mid X(\omega) = x \,\} = X^{-1}{\left[\{ x \}\right]}$, de tal forma que</p>
+
+        <p>\[ \mathbb{P}(\{ \, \omega \in \Omega \mid X(\omega) = x \,\}) = \mathbb{P}(X = x). \]</p>
+
+        <p>Por lo tanto, en este ejemplo tenemos que $\mathbb{P}(X = 2) = 0.375$. Del mismo modo, se utilizará la notación 
+          $(X \leq x)$ para <strong>denotar</strong> a $\{ \, \omega \in \Omega \mid X(\omega) \leq x \, \} = X^{-1}[(-\infty, x]]$. 
+          Sin embargo, <strong>¡ten cuidado!</strong> Esta es una <strong>NOTACIÓN</strong> para facilitar la escritura de muchas de las
+          expresiones matemáticas que involucran variables aleatorias. Aunque resulte práctica, <strong>no olvides lo que representa 
+          realmente</strong>.</p>
+      </div>
+      
+      <div class="nota-box"><h2 class="number-title"> Definición</h2>
+      <p>Sea $(\Omega, \mathscr{F}, \mathbb{P})$ un espacio de probabilidad. Diremos que una función $X\colon\Omega \to \mathbb{R}$ 
+        es una <strong>variable aleatoria</strong> si para cada $B \in \mathscr{B}(\mathbb{R})$ se cumple que $X^{-1}[B] \in \mathscr{F}$.
+      </p>
+            
+      <p>Es decir, $X$ es una variable aleatoria si la <strong>imagen inversa</strong> bajo $X$ de <strong>cualquier evento</strong> del σ-álgebra de Borel, es un <strong>evento</strong> de $\mathscr{F}$.</p>
+      </div>
+
+      <div class="nota-box"><h2 class="number-title"> Observación</h2>
+      <p>En algunos contextos se usa la notación $X\colon(\Omega, \mathscr{F})\to(\mathbb{R}, \mathscr{B}(\mathbb{R}))$ para denotar a una variable aleatoria. Usando esta notación, se escribe explícitamente el σ-álgebra del dominio y del codominio de $X$.</p>
+
+      <p>Intuitivamente, una <strong>variable aleatoria </strong>es un <strong>valor numérico asociado</strong> al
+        <strong>resultado</strong> de un experimento aleatorio. Por ejemplo, cuando hicimos el experimento de lanzar
+        una moneda $4$ veces, el <strong>valor numérico</strong> asociado a cada uno de los posibles resultados del
+        experimento es <strong>la cantidad de águilas que salieron en los $4$ lanzamientos</strong>.
+      </p>
+
+      <p>
+      Además, previamente acordamos que los elementos de un σ-álgebra son aquellos que se <strong>pueden medir</strong>, pues el dominio de la medida $\mathbb{P}$ es el σ-álgebra. Esencialmente, la definición de <strong>variable aleatoria</strong> pide que la función <strong>preserve la medibilidad</strong>. Es decir, que si $A$ es un subconjunto <strong>medible</strong> del codominio de $X$ (esto es, $A \in \mathscr{B}(\mathbb{R})$), entonces $X^{-1}[A]$ debe de ser un subconjunto <strong>medible</strong> del dominio de $X$; es decir, $X^{-1}[A] \in \mathscr{F}$. De este modo,
+      \[ \mathbb{P}(X \in A) = \mathbb{P}(X^{-1}[A]) = \mathbb{P}(\{\, \omega\in\Omega\mid X(\omega) \in A \,\}), \]</p>
+
+      <p>es un valor que está bien definido, pues $X^{-1}[A] \in \mathscr{F}$ y $\mathrm{Dom}(\mathbb{P}) = \mathscr{F}$.</p>
+
+      </p>
+      </div>
+
+      <div class="nota-box"><h2 class="number-title"> Teorema</h2>
+      <p>Sean $(\Omega, \mathscr{F}, \mathbb{P})$ un espacio de probabilidad y $X\colon\Omega\to\mathbb{R}$ una función. Si $\mathcal{G} \subseteq \mathbb{R}$ es un conjunto tal que $\sigma(\mathcal{G}) = \mathscr{B}(\mathbb{R})$, 
+        entonces las siguientes proposiciones son equivalentes:
+      </p>
+      
+      <ol><li>$X\colon\Omega\to\mathbb{R}$ es una variable aleatoria.</li><li>Para todo $A \in \mathcal{G}$ se cumple que $X^{-1}[A] \in \mathscr{F}$.</li></ol>
+
+      </div>
+
+      <div class="nota-box"><h2 class="number-title"> Observación</h2>
+      <p>Este teorema es de mucha utilidad, ya que dada una función $X\colon\Omega\to\mathbb{R}$, demostrar que $X$ es
+        una variable aleatoria es equivalente a demostrar que $X$ <strong>preserva la medibilidad</strong>
+        sobre una familia de conjuntos que genera a $\mathscr{B}(\mathbb{R})$, una tarea mucho más sencilla que hacerlo 
+        para <strong>todos</strong> los elementos del σ-álgebra de Borel.</p>
+      </div>
+
+      <div class="nota-box"><h2 class="number-title"> Nota</h2>
+        <p>Previamente establecimos que $\mathscr{B}(\mathbb{R})$ es el σ-álgebra generado por varias familias de subconjuntos de $\mathbb{R}$.
+          En particular, $\mathscr{B}(\mathbb{R})$ puede generarse a partir de la familia de intervalos de la forma $(-\infty, x]$, 
+          con $x \in \mathbb{R}$. Por ello, gracias al teorema que demostramos, podemos caracterizar a una variable aleatoria como sigue:</p>
+      </div>
+
+      <div class="nota-box"><h2 class="number-title"> Definición</h2>
+      <p>Sea $(\Omega, \mathscr{F}, \mathbb{P})$ un espacio de probabilidad. Diremos que una función $X\colon\Omega\to\mathbb{R}$ es una <strong>variable aleatoria</strong> si para cada $x \in \mathbb{R}$ se cumple que $X^{-1}[(-\infty, x]] \in \mathscr{F}$. Esto es,</p>
+      
+      <p>\[ \{ \, \omega \in \Omega \mid X(\omega) \leq x \, \} \in \mathscr{F}. \]</p>
+
+      </div>
+
+      <h1 class="title flexbox_"> Medida de probabilidad inducida por una variable aleatoria</h1>
+
+      <div class="nota-box"><h2 class="number-title"> introducción</h2>
+      <p>Dados $(\Omega, \mathscr{F}, \mathbb{P})$ un espacio de probabilidad y $X\colon\Omega\to\mathbb{R}$ una variable aleatoria, vimos que podíamos usar la medida de probabilidad $\mathbb{P}$ para medir la probabilidad de los subconjuntos de la forma $(-\infty, x]$ a través de sus imágenes inversas bajo $X$. De hecho, gracias a lo que discutimos al final de la sección pasada, resulta que esto se puede hacer para cualquier<strong> evento de $\mathbb{R}$</strong>, es decir, <strong>para todos los elementos de $\mathscr{B}(\mathbb{R})$</strong>. A la medida resultante para los eventos de $\mathbb{R}$ se le conoce como <strong>la medida de probabilidad inducida por $X$</strong>, y se define como sigue.</p>
+      </div>
+
+      <div class="nota-box"><h2 class="number-title"> Definición</h2>
+      <p>Sean $(\Omega, \mathscr{F}, \mathbb{P})$ un espacio de probabilidad y $X\colon\Omega\to\mathbb{R}$ una variable aleatoria. La <strong>medida de probabilidad inducida por $X$</strong> es la medida de probabilidad $P_{X}: \mathscr{B}(\mathbb{R}) \to \mathbb{R}$ dada por</p>
+
+      <p>\begin{align*} \mathbb{P}_{X}(B) &amp;= \mathbb{P}(\{\, \omega \in \Omega \mid X(\omega) \in B \,\}), &amp; \text{para cada $B \in \mathscr{B}(\mathbb{R})$. } \end{align*}</p>
+      
+      <p>Equivalentemente, usando la <strong>notación</strong> probabilista para imágenes inversas, $P_{X}: \mathscr{B}(\mathbb{R}) \to \mathbb{R}$ es la función dada por</p>
+      
+      <p>\begin{align*}\mathbb{P}_{X}(B) &amp;= \mathbb{P}(X \in B), &amp; \text{para cada $B \in \mathscr{B}(\mathbb{R})$}. \end{align*}</p>
+      </div>
+
+      <div class="nota-box"><h2 class="number-title"> Observación</h2>
+      <p> si $(\Omega, \mathscr{F}, \mathbb{P})$ es un espacio de probabilidad y $X\colon\Omega\to\mathbb{R}$ es una variable aleatoria, entonces $(\mathbb{R}, \mathscr{B}(\mathbb{R}),\mathbb{P}_{X})$ es un espacio de probabilidad.</p>
+      </div>
+      
+
+      <h1 class="title flexbox_"> Funciones de Distribución de Probabilidad</h1>
+
+      <div class="nota-box"><h2 class="number-title"> Introducción</h2>
+      <p>Una vez que hemos introducido el concepto de <strong>variable aleatoria</strong>, nos toca ver qué nuevas definiciones surgen a partir de este. Un primer concepto que surge es la <strong>función de distribución</strong>. A grandes rasgos, dado un espacio de probabilidad $(\Omega, \mathscr{F}, \mathbb{P})$, en la entrada anterior vimos que una función $X\colon\Omega\to\mathbb{R}$ <strong>debe de satisfacer que para cualquier $x \in \mathbb{R}$, $X^{-1}[(-\infty, x]]$ es un evento de $\Omega$</strong>. Básicamente, esta condición era <strong>suficiente</strong> para concluir que para cada $B \in \mathscr{B}(\mathbb{R})$ se cumple que $X^{-1}[B] \in \mathscr{F}$. En otras palabras, <strong>la imagen inversa de cualquier evento de $\mathbb{R}$ es un evento de $\Omega$</strong>.</p>
+
+      <p>De manera similar, lo que haremos será definir la probabilidad de los eventos de la forma $(X \leq x)$, con $x \in \mathbb{R}$. No lo veremos aquí (porque no tenemos las herramientas suficientes para hacerlo), pero resulta que asignarle probabilidad a esos eventos captura toda la información relevante sobre una variable aleatoria. Esto nos permitirá prescindir por completo de muchos detalles de la variable aleatoria, y centrar nuestra atención en el conjunto de valores que puede tomar.</p>
+      </div>
+
+
+      <div class="nota-box"><h2 class="number-title"> Definición</h2>
+      <p>Sea $F\colon\mathbb{R}\to\mathbb{R}$ una función. Diremos que $F$ es una <strong>función de distribución de probabilidad</strong> si:</p>
+
+      <ol>
+        <li>$F$ es <strong>no-decreciente</strong>. Esto es, para cada $a, b \in \mathbb{R}$, si $a &lt; b$ entonces $F(a) \leq F(b)$.</li>
+        <li>$F$ es <strong>continua por la derecha</strong>. Es decir, para cada $a \in \mathbb{R}$ se cumple que\[ \lim_{x\to a^{+}} F(x) = F(a). \]</li>
+        <li>Se cumple que\[ \lim_{x\to\infty} F(x) = 1 \quad\text{y}\quad \lim_{x\to -\infty} F(x) = 0. \]</li>
+      </ol>
+      </div>
+
+      <div class="nota-box"><h2 class="number-title"> Observación</h2>
+      
+      <p>Una función <strong>no requiere de ningún contexto adicional</strong> para considerarse una función 
+        de distribución de probabilidad. Es decir, para que una función $F\colon\mathbb{R}\to\mathbb{R}$ sea considerada
+        una función de distribución de probabilidad, simplemente debe de ser <strong>no-decreciente</strong>,
+        <strong>continua por la derecha</strong> y <strong>sus límites a $\infty$ y $-\infty$ deben de ser $1$ 
+        y $0$</strong>, respectivamente.
+      </p>
+      </div>
+
+
+      <h1 class="title flexbox_">  Función de distribución de una variable aleatoria</h1>
+
+      <div class="nota-box"><h2 class="number-title"> Introducción</h2>
+        <p>Dada cualquier variable aleatoria $X$ sobre un espacio de probabilidad $(\Omega, \mathscr{F}, \mathbb{P})$, 
+          hay una función muy importante asociada a $X$: su función de distribución, definida como sigue.</p>
+      </div>
+
+      <div class="nota-box"><h2 class="number-title"> Definición</h2>
+      <p>Sea $(\Omega, \mathscr{F}, \mathbb{P})$ un espacio de probabilidad y sea $X\colon\Omega\to\mathbb{R}$ una variable aleatoria.
+        La <strong>función de distribución de $X$</strong> es la función $F_{X}\colon\mathbb{R}\to[0,1]$ dada por</p>
+      
+        <p>\[ F_{X}(x) = \mathbb{P}(\{\, \omega\in\Omega \mid X(\omega) \leq x \,\}) = \mathbb{P}(X \leq x), \quad \text{para cada $x \in \mathbb{R}$}. \]</p>
+
+        <p>$F_{X}$ también es llamada la <strong>función de distribución acumulada de $X$</strong>, que en inglés se abrevia como <strong>CDF</strong> (<em>cumulative distribution function</em>).</p>
+      </div>
+
+      <div class="nota-box"><h2 class="number-title"> Observación</h2>
+        <p>Es decir, dada una variable aleatoria $X$, su <strong>función de distribución</strong> devuelve la probabilidad de que $X$
+          sea menor o igual a $x$, para cada $x \in\mathbb{R}$. Como seguramente ya sospechas por el nombre de $F_{X}$,
+          resulta que $F_{X}$ es una <strong>función de distribución de probabilidad</strong>. Este hecho es demostrado
+          el siguiente teorema.
+        </p>
+      </div>
+
+      <div class="nota-box"><h2 class="number-title"> Teorema</h2>
+      <p>Sea $(\Omega, \mathscr{F}, \mathbb{P})$ un espacio de probabilidad y sea $X\colon\Omega\to\mathbb{R}$ una variable aleatoria. 
+        Entonces $F_{X}\colon\mathbb{R}\to[0,1]$ es una <strong>función de distribución de probabilidad</strong>.
+      </p>
+      </div>
+
+      <h1 class="title flexbox_">  Partiendo de una función de distribución de probabilidad</h1>
+
+      <div class="nota-box"><h2 class="number-title"> Introducción</h2>
+      
+<p>Por el teorema anterior, vimos que <strong>la <em>función de distribución</em> de cualquier variable aleatoria es también una <em>función de distribución de probabilidad</em></strong>. Es decir, que si tienes un espacio de probabilidad $(\Omega, \mathscr{F}, \mathbb{P})$ y una variable aleatoria $X\colon\Omega\to\mathbb{R}$, la función de distribución de $X$, $F_{X}\colon\mathbb{R}\to[0,1]$, es una función de distribución de probabilidad.</p>
+
+
+
+<p>Por otro lado, ahora imagina que te encuentras con una función $F\colon\mathbb{R}\to\mathbb{R}$ que es una <strong>función de distribución de probabilidad</strong>. No obstante, observa que no sabes <strong>nada más</strong> sobre esta función. Es decir, no hay ninguna variable aleatoria ni un espacio de probabilidad a la vista&#8230; ¿Será posible que $F$ provenga de alguna variable aleatoria $X$ definida sobre un espacio de probabilidad $(\Omega, \mathscr{F}, \mathbb{P})$?</p>
+
+
+
+<p>En otras palabras: dada $F\colon\mathbb{R}\to\mathbb{R}$ una función de distribución de probabilidad, ¿siempre existen un espacio de probabilidad $(\Omega, \mathscr{F}, \mathbb{P})$ y una variable aleatoria $X\colon\Omega\to\mathbb{R}$ tal que $F$ es la función de distribución de $X$? ¡La respuesta es que <strong>sí</strong>! A grandes rasgos, $F$ define la probabilidad de los eventos de la forma $(-\infty, x]$, para cada $x \in \mathbb{R}$. Esto resulta suficiente para definir por completo la medida de probabilidad inducida por una variable aleatoria $X$&#8230; pero, <strong>¿cuál variable aleatoria $X$?</strong> De manera <strong>canónica</strong>, siempre puede utilizarse la variable aleatoria <strong>identidad</strong> sobre $\Omega = \mathbb{R}$, que es la función $X\colon\mathbb{R}\to\mathbb{R}$ tal que para cada $\omega\in\mathbb{R}$, $X(\omega) = \omega$. De este modo, la medida de probabilidad inducida por $X$ es <strong>la misma que la medida en el dominio de $X$</strong>, que en este caso es $\mathbb{R}$ con $\mathscr{B}(\mathbb{R})$ como σ-álgebra, y usando la medida determinada por $F$.</p>
+
+
+
+<p><strong>¡CUIDADO!</strong> Esto <strong>NO</strong> significa que <strong>todas</strong> las variables aleatorias son simplemente la función identidad. Lo que significa es que <strong>siempre</strong> que tengas una <strong>función de distribución de probabilidad</strong> $F\colon\mathbb{R}\to\mathbb{R}$, está garantizado que <strong>existen</strong> un espacio de probabilidad $(\Omega, \mathscr{F}, \mathbb{P})$ y una variable aleatoria $X\colon\Omega\to\mathbb{R}$ de tal forma que $F$ es la <strong>función de distribución de $X$</strong>. La existencia está garantizada porque, <strong>al menos</strong>, siempre se puede usar la <strong>función identidad</strong> de $\mathbb{R}$ en $\mathbb{R}$ como variable aleatoria, pero puede haber otras distintas cuya función de distribución también es $F$.</p>
+
+      </div>
+
+
+
+
+      
 </body>
