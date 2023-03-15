@@ -165,53 +165,157 @@
 
 
       
-      <h1 class="title flexbox_"> Muestra aleatoria</h1>
+      <h1 class="title flexbox_"> Muestreo aleatoria</h1>
 
       <div class="nota-box"><h2 class="number-title"> Introducción</h2>
-        <p>A partir de las <b>observaciones</b> se intenta dismunuir el desconocimiento de la distribución
-        teorica $F$ de la v.a. en estudio.
+        <p>A partir de las <b>observaciones</b> se intenta <b>disminuir el desconocimiento de la distribución
+        teorica $F$</b> de la variable aleatoria en estudio.
         </p>
 
         <p>En principio tales observaciones pueden obtenerse llevando a cabo repeticiones del experimento 
-          aleatorio que da lugar a la v.a. $X$ y anotando los valores de $X$ en cada una de ellas. Obteniendo 
-          así un conjunto de valores númericos:
+          aleatorio que da lugar a la variable aleatoria $X$ y anotando los valores de $X$ en cada una de ellas.
+          Se obtendrá así un conjunto de valores númericos:
           $$(x_{1}, x_{2},\ldots,x_{n})$$
-          que constituyen lo que se denomina <b>muestra aleatoria de $X$</b>. El número $n$ de repeticiones 
-          efectuadas y observaciones obtenidas se denomina <b>tamaño de la muestra.</b>
+          que constituyen lo que se denomina una <b>muestra aleatoria de $X$</b>. El número $n$ de repeticiones 
+          realizadas y observaciones obtenidas se denomina <b>tamaño de la muestra.</b>
         </p>
 
-        <p>Deseamos disponer de una muestra "representativa" de la población y si se considera la distribución 
-          de esta,se podria tratar de seleccionar aquella muestra con este requisito. Sin embargo, 
-          puesto que la distrubición teórica es desconocida no es posible siquiera prejuzgar si una 
+        <p>Se desea disponer de una <b>muestra "representativa"</b> de la población y si se considera la distribución 
+          de esta, se podría tratar de seleccionar aquella muestra con este requisito. Sin embargo, 
+          puesto que la <b>distribución teórica es desconocida</b> no es posible siquiera prejuzgar si una 
           determinada muestra es "representativa" de algo que se desconoce. 
         </p>
 
-        <p>Ante tal <em>circulo vicioso</em>, la única solución es confiar en que el azar 
-        se encargara de suministrar una muestra con la deseada representatividad. 
+        <p>Ante tal <b><em>circulo vicioso</em></b>, la única solución es <b>confiar en que el azar 
+        se encargara de suministrar una muestra con la deseada representatividad</b>. 
         </p>
       </div>
 
       <div class="nota-box"><h2 class="number-title"> Ejemplo</h2>
-        <p>Al lanzar $100$ veces un dado cuyo equilibrio se pretende analizar, es posible que aunque 
-          el dado estuviera equilibrado, se ocurra el evento  "poco representativo" de obtener 
-          $95$ seis de $100$ lanzamientos lo cual llevaria sun duda a concluir estadisticamente 
+        <p>Al lanzar $100$ veces un dado cuyo <b>equilibrio se pretende analizar</b>, es posible que aunque 
+          el dado estuviera bien equilibrado, ocurra el evento  "poco representativo" de obtener 
+          $95$ seis de $100$ lanzamientos; lo cual llevaría sin duda a concluir estadisticamente 
           que el dado esta cargado. Sin embargo, la probabilidad de tal evento es muy pequeña (si el dado 
-          esta realmente perfectamente bien equilibrado) y no sólo eso, si no que la ley fuerte 
-          de los grandes números garantiza que si el tamaño de la muestra es suficientemente grande, es 
+          esta realmente perfectamente bien equilibrado) y no sólo eso, si no que <b>la ley fuerte 
+          de los grandes números</b> garantiza que si el tamaño de la muestra es suficientemente grande, es 
           sumanente probable que se obtenga una muestra representativa con proporción de cada puntuación   
-          muy proximo a la probabilidad real de cada cara observable.  
-              
+          muy proximo a la probabilidad real de cada cara observable.    
+        </p>
+      </div>
+
+      <div class="nota-box"><h2 class="number-title"> Nota</h2>
+      <p>Los procedimientos posibles para obtener una <em>muestra aleatoria</em> pueden ser muy diversos 
+        dependiendo de las condiciones en se efectuan las repeticiones del experimento aleatorio.
         </p>
 
-        <p>Los procedimientos posibles para obtener una <em>muestra aleatoria</em> pueden ser muy diversos 
-        deoendiendo de las condicoones en se efectian las repeticiones del esperimento aleatorio.
+        <p>A continuación se resumen las principales características de os muestreo probabilísticos más usuales:</p>
+        <!-- <p>Lo más simple es llevar a cabo representaciones independientes y en tal caso la muestra  </p> -->
+      </div>
+
+      <h1 class="title flexbox_"> Muestreo aleatorio simple</h1>
+
+      <div class="nota-box"><h2 class="number-title"> Definición</h2>
+          <p>Se trata de unprocedimiento de muestreo (sin remplazo) en el que se selecciona  $n$ unidades de los $N$ en la población, 
+            de forma que cualquier posible muestra del mismo tamaño tenga la misma probabilidad de ser elegida.    
+          </p>
+          <p>Lo más simple es llevar a cabo <b>repeticiones independientes</b> y en tal caso la muestra obtenida se denomina <em>muestra
+            aleatoria simple</em>.
+          </p>1
+      </div>
+
+    
+      <div class="nota-box"><h2 class="number-title"> Ejemplo</h2>
+        <p>
+          <ol>
+            <li><p>En el ejemplo del dado, para obtener una muestra aleatoria simple esto se reduce a realizar los lanzamientos siempre en las mismas condiciones sin tener 
+              en cuenta los resultados anteriores.</p>
+            </li>
+            <li><p>Para obtener una muestra aleatoria simple de alturas de los individuos de una población,tenemos que seleccionar 
+              en cada ocasión a al inviduo a medir con igual probabilidad en todos los miembros.
+            </p>
+         
+            </li>
+          </ol>
+        </p>
+       </div>
+  
+        <div class="nota-box"><h2 class="number-title"> Observación</h2>
+          <p>En el segundo caso del ejemplo anterior, la posibilidad de medir dos veces al mismo individuo individuo no parece razonable,
+            y sería más lógico excluir  de cada eleccción a  los individuos que ya hayan sido seleccionados. Sin embargo, en este 
+            caso la probabilidad de seleccionar a cada individuo depende  de los elementos previamente seleccionados,
+            no hay independencia. Y la muestra que se obtenga no será aleatoria simple.  
+          </p>
+        </div>
+
+      <h1 class="title flexbox_"> Muestreo por conglomerados</h1>
+
+      <div class="nota-box"><h2 class="number-title"> Definición</h2>
+          <p>Se divide a la población en grupos de acuerdo con su proximidad geográfica o de otro tipo (<b>conglomerados</b>). 
+            Se busca que cada grupo sea heterogeneo y que tenga representados todas las caracteristicas de la población. 
+          </p>
+          <p>Se selecciona una muestra de conglomerados al azar y se toma el conglomerado o una prueba del mismo.</p>
+      </div>
+
+      <h1 class="title flexbox_"> Muestreo estratificado</h1>
+
+      <div class="nota-box"><h2 class="number-title"> Definición</h2>
+          <p>Se divide a la población en grupos homogeneos (<b>estratos</b>) de acuerdo xon las características  a estudiar. 
+            Luego, se selecciona un muestra aleatoria de cada estrato, tratando de que todos los estratos de la población queden 
+              representados. 
+          </p>
+      </div>
+
+      <div class="nota-box"><h2 class="number-title"> Ejemplo</h2>
+        <p>En un estudio de las características socioeconomicas de una ciudad los estratos puede serlas colonias de lo mismo, 
+          ya que las colonias suelen representar caracteristicas diferenciales.
+        </p>
+    </div>
+
+    <div class="nota-box"><h2 class="number-title"> Observación</h2>
+      <p><b>En un muestreo estratificado</b> se consideran todos los estratos y en cada uno se considera 
+        una muestra de individuos. Mientras que en el <b>muestreo por conglomerados</b>, se seleccionan al azar los conglomerados
+        que serán considerados y una vez elegidos se estudian todos los indiviudos de cada conglomerado. 
+      </p>
+    </div>
+
+    
+
+      <h1 class="title flexbox_"> Muestra aleatoria</h1>
+
+
+      <div class="nota-box"><h2 class="number-title"> Introducción</h2>
+        <p>El <em>muestreo aleatorio simple</em> garantiza una muestra representativa de la población y la  obtención 
+          de observaciones independientes. 
         </p>
 
-        <p>Lo más simple es llevar a cabo representaciones independientes  </p>
+        <p>Consideremos las siguientes situaciones que ocurren frecuentemente en estadística:</p>
+
+        <p>
+          <ol>
+            <li><p>Se extraen <b>objetos</b>,  uno cada vez, de la población y se determina la característica particular de interes de cada 
+            objeto. Despues de cada observación y antes de la siguiente extracción, se <b>devuelve el objeto extraido</b> y se mezcla en la
+            población de objetos.
+          </p>
+            </li>
+            <li>
+              <p>Se extraen los objetos de una población finira como en $1$, excepto que los <b>objetos no se remplazan</b>. </p>
+            </li>
+          </ol>
+        </p>
+
+        <p>Si se supone que cada selección es aleatoria, el muestreo en $1$ es conocido como <b>muestreo aleatorio con reemplazo</b> y $2$ 
+        recibe el nombre de <b>muestreo aleatorio sin remplazo.</b> o <b>muestreo aleatorio simple</b> </p>
+      </div>
+
+      <div class="nota-box"><h2 class="number-title"> Observación</h2>
+        <p>En cierto sentido el muestreo aleatorio sin remplazo es mejor que el muestreo aleatorio simple ya que a veces la mezcla que se requiere 
+          con el reemplazo de los objetos no siempre es facil de conseguir.  Consideremos las siguientes situaciones que aparecen frecuentemente 
+          en Estadística.
+        </p>
       </div>
 
 
+   
 
-  
 
 </body>
