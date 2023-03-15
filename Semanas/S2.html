@@ -106,10 +106,10 @@
   
       </div>
         
+
       <div class="nota-box"><h2 class="number-title"> Nota</h2>
-      <p>Las familias de distribuciones teóricas:
-      $$\mathcal{F}=\{F_{\theta} \colon \theta \in \Theta \}$$
-      que se presentan en los problemas de inferencia estadística nunca son distribuciones muy raras.
+      <p>Las familias de distribuciones teóricas: $\mathcal{F}=\{F_{\theta} \colon \theta \in \Theta \}$
+      que se presentan en los problemas de inferencia estadística en general no son distribuciones muy raras.
       Concretamente casi sin excepción son familias de distribuciones  continuas, con funcion de desidad
       o familias de funciones discretas caracterizadas por su función de probabilidad, dependiendo 
       de si la característica que se desea analizar es continua o discreta.          
@@ -127,10 +127,87 @@
 
       <p>Por ejemplo, cuando:
         <ol>
-          <li>$\mathcal{F}$ es la familia de todas las funciones de distribución continuas.</li>
+          <li>$\mathcal{F}$ es la familia de todas las funciones de distribución continuas.</li><br>
           <li>$\mathcal{F}$ es la familia de todas las distribución absolutamente continuas.</li>
         </ol> 
       </p>
+      <p>Tales problemas de <b>inferencia estadística No paramétrica</b> representa un
+        mayor número de dificultades.  
+      </p>
+      </div>
+
+      
+      <h1 class="title flexbox_"> Espacio paramétrico </h1>
+
+      <div class="nota-box"><h2 class="number-title"> Nota</h2>
+        <p>Al conjunto de valores que el parametro $\theta$ puede tomar se le llama 
+          <b>espacio paramétrico</b> o <b>parametral</b> y se denota por $\Theta$
+        </p>
+      </div>
+      
+      <div class="nota-box"><h2 class="number-title"> Ejemplo</h2>
+        <p>
+          <ol>
+            <li>En el caso de la distribución Bernoulli: $\Theta=[0,1]$</li><br>
+            <li>En el caso de la distribución Poisson: $\Theta=(0,\infty)$</li><br>
+            <li>En el caso de la distribución Normal: $\Theta=\mathbb{R}\times (0,\infty)\subset \mathbb{R}^{2}$</li><br>
+            <li>En el caso de la distribución Exponencial: $\Theta=(0,\infty)$</li>
+          </ol>
+        </p>
+      </div>
+      
+      <div class="nota-box"><h2 class="number-title"> Observación</h2>
+        <p>La inferencia estadística también es conocida como <b>estadistica inductiva</b> o <b>inferencia inductiva</b>
+        pues va de lo particular a lo general al hacer conclusiones de una población a partir de 
+        una muestra representativa de la misma.
+        </p>
+      </div>
+
+
+      
+      <h1 class="title flexbox_"> Muestra aleatoria</h1>
+
+      <div class="nota-box"><h2 class="number-title"> Introducción</h2>
+        <p>A partir de las <b>observaciones</b> se intenta dismunuir el desconocimiento de la distribución
+        teorica $F$ de la v.a. en estudio.
+        </p>
+
+        <p>En principio tales observaciones pueden obtenerse llevando a cabo repeticiones del experimento 
+          aleatorio que da lugar a la v.a. $X$ y anotando los valores de $X$ en cada una de ellas. Obteniendo 
+          así un conjunto de valores númericos:
+          $$(x_{1}, x_{2},\ldots,x_{n})$$
+          que constituyen lo que se denomina <b>muestra aleatoria de $X$</b>. El número $n$ de repeticiones 
+          efectuadas y observaciones obtenidas se denomina <b>tamaño de la muestra.</b>
+        </p>
+
+        <p>Deseamos disponer de una muestra "representativa" de la población y si se considera la distribución 
+          de esta,se podria tratar de seleccionar aquella muestra con este requisito. Sin embargo, 
+          puesto que la distrubición teórica es desconocida no es posible siquiera prejuzgar si una 
+          determinada muestra es "representativa" de algo que se desconoce. 
+        </p>
+
+        <p>Ante tal <em>circulo vicioso</em>, la única solución es confiar en que el azar 
+        se encargara de suministrar una muestra con la deseada representatividad. 
+        </p>
+      </div>
+
+      <div class="nota-box"><h2 class="number-title"> Ejemplo</h2>
+        <p>Al lanzar $100$ veces un dado cuyo equilibrio se pretende analizar, es posible que aunque 
+          el dado estuviera equilibrado, se ocurra el evento  "poco representativo" de obtener 
+          $95$ seis de $100$ lanzamientos lo cual llevaria sun duda a concluir estadisticamente 
+          que el dado esta cargado. Sin embargo, la probabilidad de tal evento es muy pequeña (si el dado 
+          esta realmente perfectamente bien equilibrado) y no sólo eso, si no que la ley fuerte 
+          de los grandes números garantiza que si el tamaño de la muestra es suficientemente grande, es 
+          sumanente probable que se obtenga una muestra representativa con proporción de cada puntuación   
+          muy proximo a la probabilidad real de cada cara observable.  
+              
+        </p>
+
+        <p>Los procedimientos posibles para obtener una <em>muestra aleatoria</em> pueden ser muy diversos 
+        deoendiendo de las condicoones en se efectian las repeticiones del esperimento aleatorio.
+        </p>
+
+        <p>Lo más simple es llevar a cabo representaciones independientes  </p>
       </div>
 
 
