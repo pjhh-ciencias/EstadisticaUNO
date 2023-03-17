@@ -361,28 +361,47 @@
 
     <div class="nota-box"><h2 class="number-title"> Ejemplo</h2>
     <p>Una urna contiene cuatro bolas numeradas del $1$ al $4$. Se extraen $2$ aleatoriamente, una cada vez. Sea $X$ 
-      el número de la primera bola extraida y $Y$ el número de la segunda bola extraída. ¿Cual es la distribución teorica 
-      de las v.a.  $X$ y $Y$ ?
+      el número de la primera bola extraida y $Y$ el número de la segunda bola extraída. ¿Cual es la distribución teoríca 
+      de las variables aleatorias  $X$ y $Y$ ?
     </p>
     </div>
 
     <div class="nota-box"><h2 class="number-title"> Nota</h2>
-    <p>De esta manera, se diseña un experimento y se lleva a cabo para proporcionar
-      la observación $X_1$ de la caracterstica observable $X$. El experimento
-      se repite bajo las mismas condiciones proporcionando el $X_2$. El proceso continua
-      hasta tener $n$ observaciones $X_1, X_2\ldots,  X_n$ de la característica $X$;
-      estas observaciones son conocidas como los <b>valores muestrales</b> de $X$ 
-      y se dice que constituyen una <b>muestra aleatoria</b>.</p>
+      <p>En general, se diseña un experimento y se lleva a cabo para proporcionar
+        la observación $X_1$ de la característica observable $X$. El experimento
+        se repite bajo las mismas condiciones proporcionando la siguiente observación $X_2$. 
+        El proceso continua hasta tener $n$ observaciones $X_1, X_2\ldots,  X_n$ de la característica $X$;
+        estas observaciones son conocidas como los <b>valores muestrales</b> de $X$ 
+        y se dice que constituyen una <em>muestra aleatoria</em>.
+      </p>
       
-      <p>Observa que  cuando se ha obtenido una muestra se tienen n observaciones numéricas:
-        $$(x1; x2; : : : ; xn),$$ pero cuando se está planificando el procedimiento de muestreo
-        y diseñando el método para obtener inferencias aúun no se sabe que valores numéricos se obtendrán
-        y deben considerarse $n$ variables aleatorias; estas variables aleatorias serán
+      <p>Observa que  cuando se ha obtenido una muestra se tienen $n$ <b>observaciones numéricas</b>:
+        $$(x_1, x_2\ldots,  x_n)$$ pero cuando se está planificando el procedimiento de muestreo
+        y diseñando el método para obtener inferencias aún <b>no se sabe que valores numéricos se obtendrán
+        y deben considerarse $n$ variables aleatorias</b>; estas variables aleatorias serán
         independientes e identicamente distribuidas.
       </p>
     </div>
 
     <div class="nota-box"><h2 class="number-title"> Definición</h2>
+        <p>Si $X_1, X_2\ldots,  X_n$ es un conjunto de $n$ variables aleatorias, independientes
+          e identicamente distribuidas (i.i.d.), entonces se dice que $X_1, X_2\ldots,  X_n$ es
+          una <b>muestra aleatoria</b> (<b>m.a.</b>).
+        </p>
+    </div>
+
+    <div class="nota-box"><h2 class="number-title"> Observación</h2>
+    <p>Si $X_1, X_2\ldots,  X_n$ es una muestra aleatoria, entonces su función de densidad conjunta 
+      está dada por 
+      $$f(_{$X_1, X_2\ldots,  X_n$}(x_1, \ldots,  x_n;\theta) = \prod_{i=1}^{n} f(x_{i};\theta) $$
+    </p>
+    </div>
+
+    <p>Se define la <b>distribución de la muestra aleatoria</b> (o simplemente
+      <b>distribución de la muestra</b>) será la función de densidad conjunta
+      de las variables aleatorias que componen la muestra aleatoria y, por 
+      la observación anterior, se calculará como el producto de las densidades marginales
+      de dichas variables.</p>
 
 
 </body>
