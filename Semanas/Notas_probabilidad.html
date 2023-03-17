@@ -604,7 +604,6 @@
           original de la población.
         </p>
 
-          
         <p>La importancia del TLC es que nos permite hacer inferencias sobre la población a partir 
           de una muestra aleatoria. En particular, nos permite estimar la media y la varianza de la población,
           y hacer pruebas de hipótesis sobre la media de la población.
@@ -615,7 +614,6 @@
           normal gracias al TLC. Esto significa que podemos utilizar la distribución normal para modelar y analizar una
           amplia variedad de fenómenos, desde el precio de las acciones hasta el peso de los estudiantes en una población.
         </p>
-  
       </div>
 
       <div class="nota-box"><h2 class="number-title"> Ejemplo</h2>
@@ -646,13 +644,24 @@
       </div>
 
       
+      <h1 class="title flexbox_"> Convergencia Casi-Seguramente</h1>
+      
+      <div class="nota-box"><h2 class="number-title"> Definición (Convergencia Casi-Seguramente)</h2>
+        <p>La sucesion  $X_{1}, X_{2},\ldots $   de variables aleatorias <b>converge a $X$ casi seguramente</b> 
+          si  
+          $$\mathbb{P}\left(X_{n} \longrightarrow X\right)= \mathbb{P}\left(\{ \omega \in \Omega \colon X_{n}(\omega) \longrightarrow X(\omega) \}\right)=1$$ 
+          en otras palabras, si existe un conjunto $N \in \mathscr{F}$ tal que $\mathbb{P}(N)=0$ y para todo $\omega \in N^{c}$, 
+          la sucesión $(X_{n}(\omega))_{n\geq 1}$ converge a $X(\omega)$.
+        </p>
+
+      </div>
+
       <h1 class="title flexbox_">  Ley Fuerte de los Grandes Números</h1>
       <div class="nota-box"><h2 class="number-title"> Introducción</h2>
         <p>La Ley Fuerte de los Grandes Números establece que, bajo ciertas condiciones,
           la media muestral de una muestra aleatoria grande de una población converge casi seguramente a la media poblacional.
           Es decir, a medida que aumentamos el tamaño de la muestra, la media de la muestra se aproxima cada vez más a
           la media poblacional.
-          
       </div>
 
       <div class="nota-box"><h2 class="number-title"> Ejemplo</h2>
@@ -663,27 +672,29 @@
       </p>
       </div>
 
-        
       <div class="nota-box"><h2 class="number-title"> Teorema (Ley Fuerte de los Grandes Números)</h2>
         <p>Sea $X_{1}, X_{2},\ldots $ una sucesión  de variables aleatorias i.i.d. con $\mathbb{E}[X_{1}]=\mu < \infty$  entonces 
           $$\displaystyle{\frac{S_{n}}{n} \overset{c.s.}{\longrightarrow} \mu}$$
           Equivalentemente si denotamos $\overline{X}_{n}:= \frac{S_{n}}{n}$, la conclusion se puede escribir como:
           $$\overline{X}_{n}  \overset{c.s}{\longrightarrow} N(0,1)$$
-
         </p>
       </div>
 
-      <h1 class="title flexbox_"> Convergencia Casi-Seguramente</h1>
-      
-      <div class="nota-box"><h2 class="number-title"> Definición (Convergencia Casi-Seguramente)</h2>
-        <p>La sucesion  $X_{1}, X_{2},\ldots $   de variables aleatorias <b>converge a $X$ casi seguramente</b> 
-          si para todo $\epsilon >0$, existe un conjunto $N\in \mathcal{F}$ con $\mathbb{P}(N)=0$ y tal que la sucesión
-          $(X_{n})_{n\geq 1}$ converge puntualmente en $N^{c}$ i.e. 
-          $$\mathbb{P}\left(X_{n} \longrightarrow X\right)= \mathbb{P}\left(\{ \omega \in \Omega \colon X_{n}(\omega) \longrightarrow X(\omega) \}\right) = \mathbb{P}(N^{c})=1$$ 
-        </p>
+      <h1 class="title flexbox_">  Distribuciones marginales</h1>
+
+      <div class="nota-box"><h2 class="number-title"> Definición </h2>
+      <p> Sea $X=(X_1, X_2\ldots,  X_n)$ un vector aleatorio. Para cualquier subconjunto $\{i_{1},\ldots,i_{k} \}$ de $\{1,\ldots,n\}$
+        la <b>distribución del vector</b> del vector $(X_{i_1}, X_{i_2}\ldots,  X_{i_k})$ es llamada <b>distribución marginal </b>
+         y esta puede ser calculada de la distribución completa. En particular, la distribución de las variables aleatorias 
+         $X_i$ para $i\in \{ 1,2,\ldots,n\}$ es llamada la $i$-ésima istribucion maginal de $X$ 
+
+
+        L
+        In particular, the law of the random variable Xi , for i ∈ {1, . . . , N } is called the i-th
+        marginal distribution of the vector X .
+
+      </p>
       </div>
-
-
 
 
 
