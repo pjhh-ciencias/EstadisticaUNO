@@ -203,35 +203,21 @@
         </p>
       </div>
 
-      <div class="nota-box"><h2 class="number-title"> Nota</h2>
-      <p>Los procedimientos posibles para obtener una <em>muestra aleatoria</em> pueden ser muy diversos 
-        dependiendo de las condiciones en se efectuan las repeticiones del experimento aleatorio.
-        </p>
+      
 
-        <p>A continuación se resumen las principales características de los muestreos probabilísticos más usuales:</p>
-        <!-- <p>Lo más simple es llevar a cabo representaciones independientes y en tal caso la muestra  </p> -->
-      </div>
 
-      <h1 class="title flexbox_"> Muestreo aleatorio simple</h1>
-
-      <div class="nota-box"><h2 class="number-title"> Definición</h2>
-          <p>Se trata de un procedimiento de muestreo (<b>sin remplazo</b>) en el que se selecciona  $n$ unidades de los $N$ en la población, 
-            de forma que cualquier posible muestra del mismo tamaño tenga la misma probabilidad de ser elegida.    
-          </p>
-          
-      </div>
-
-    
       <div class="nota-box"><h2 class="number-title"> Ejemplo</h2>
         <p>Lo más simple es llevar a cabo <b>repeticiones independientes</b></em>.
         </p>
         <p>
           <ol>
-            <li><p>En el ejemplo del dado, para obtener una muestra aleatoria simple esto se reduce a realizar los lanzamientos siempre en las mismas condiciones sin tener 
+            <li><p>En el ejemplo del dado, para obtener una muestra aleatoria con repeticiones independientes
+              se reduce a realizar los lanzamientos siempre en las mismas condiciones sin tener 
               en cuenta los resultados anteriores.</p>
             </li>
-            <li><p>Para obtener una muestra aleatoria simple de alturas de los individuos de una población,tenemos que seleccionar 
-              en cada ocasión  al inviduo a medir con igual probabilidad entre todos los miembros de la población.
+            <li><p>Para obtener una muestra aleatoria con repeticiones independientes de alturas de
+              individuos de una población, tenemos que seleccionar  en cada ocasión  al inviduo a
+              medir con igual probabilidad entre todos los miembros de la población.
             </p>
             </li>
           </ol>
@@ -240,25 +226,45 @@
   
         <div class="nota-box"><h2 class="number-title"> Observación</h2>
           <p>En el segundo caso del ejemplo anterior, la posibilidad de medir dos veces al mismo individuo no parece razonable,
-            y sería más lógico excluir  de cada eleccción a  los individuos que ya hayan sido seleccionados. Sin embargo, en este 
-            caso la probabilidad de seleccionar a cada individuo depende  de los elementos previamente seleccionados,
-            <b>no hay independencia</b>. Y la muestra que se obtenga no será aleatoria simple.  
+            y sería más lógico excluir  de cada eleccción a  los individuos que ya hayan sido seleccionados. El efecto, de 
+            las repeticiones es la perdida de independencia, ya que de otra forma  cada individuo seleccionado solo puede ser seleccionado
+            una vez y no puede influir en la selección de otros individuos en la muestra.
           </p>
         </div>
+
+        <div class="nota-box"><h2 class="number-title"> Nota</h2>
+          <p>Los procedimientos posibles para obtener una <em>muestra aleatoria</em> pueden ser muy diversos 
+            <b>dependiendo de las condiciones en se efectuan las repeticiones del experimento aleatorio.</b>
+            </p>
+    
+            <p>A continuación se resumen las principales características de los muestreos probabilísticos más usuales:</p>
+            <!-- <p>Lo más simple es llevar a cabo representaciones independientes y en tal caso la muestra  </p> -->
+          </div>
+      <h1 class="title flexbox_"> Muestreo aleatorio simple</h1>
+
+      <div class="nota-box"><h2 class="number-title"> Definición</h2>
+          <p>Se trata de un procedimiento de muestreo (<b>sin remplazo</b>) en el que se selecciona  $n$ unidades de los $N$ en la población, 
+            de forma que <b>cualquier posible muestra del mismo tamaño tenga la misma probabilidad de ser elegida.</b>
+                
+          </p>
+          
+      </div>
+
+    
 
       <h1 class="title flexbox_"> Muestreo por conglomerados</h1>
 
       <div class="nota-box"><h2 class="number-title"> Definición</h2>
           <p>Se divide a la población en grupos de acuerdo con su proximidad geográfica o de otro tipo (<b>conglomerados</b>). 
-            Se busca que cada grupo sea heterogeneo y que tenga representados todas las caracteristicas de la población. 
+            Se busca que cada grupo sea <b>heterogeneo</b> y que tenga representados todas las caracteristicas de la población. 
           </p>
-          <p>Se selecciona una muestra de conglomerados al azar y se toma el conglomerado o una prueba del mismo.</p>
+          <p>Se selecciona una muestra de conglomerados al azar y se toma el conglomerado completo o una muestra del mismo.</p>
       </div>
 
       <h1 class="title flexbox_"> Muestreo estratificado</h1>
 
       <div class="nota-box"><h2 class="number-title"> Definición</h2>
-          <p>Se divide a la población en grupos homogeneos (<b>estratos</b>) de acuerdo xon las características  a estudiar. 
+          <p>Se divide a la población en grupos <b>homogeneos</b> (<b>estratos</b>) de acuerdo con las características  a estudiar. 
             Luego, se selecciona un muestra aleatoria de cada estrato, tratando de que todos los estratos de la población queden 
               representados. 
           </p>
@@ -289,21 +295,15 @@
 
         <p>Consideremos las siguientes situaciones que ocurren frecuentemente en estadística:</p>
 
-        <p>
-          <ol>
-            <li><p>Se extraen <b>objetos</b>,  uno cada vez, de la población y se determina la característica particular de interes de cada 
-            objeto. Despues de cada observación y antes de la siguiente extracción, se <b>devuelve el objeto extraido</b> y se mezcla en la
-            población de objetos.
+        <p><p><b>(Caso $1$)</b> Se extraen <b>objetos</b>,  uno cada vez, de la población y se determina la característica particular de interes de cada 
+            objeto. Despues de cada observación y antes de la siguiente extracción, se <b>devuelve el objeto extraido</b>
+            y se <b>mezcla</b> en la  población de objetos.
           </p>
-            </li>
-            <li>
-              <p>Se extraen los objetos de una población finita como en $1$, excepto que los <b>objetos no se remplazan</b>. </p>
-            </li>
-          </ol>
-        </p>
+
+          <p><b>(Caso $2$)</b> Se extraen los objetos de una población finita como en $1$, excepto que los <b>objetos no se remplazan</b>. </p>
 
         <p>Si se supone que cada selección es aleatoria, el muestreo en $1$ es conocido como <b>muestreo aleatorio con reemplazo</b> y $2$ 
-        recibe el nombre de <b>muestreo aleatorio sin remplazo.</b> o <b>muestreo aleatorio simple</b> </p>
+        recibe el nombre de <b>muestreo aleatorio sin remplazo.</b> o  <b>muestreo aleatorio simple</b> </p>
       </div>
 
       <div class="nota-box"><h2 class="number-title"> Observación</h2>
@@ -315,11 +315,11 @@
       <div class="nota-box"><h2 class="number-title"> Observación</h2>
         <p>Consideremos las siguientes <b>situaciones extremas</b> que aparecen frecuentemente 
           en Estadística:
-            <p><b>(Situación $1$)</b> Supongamos que  <b>hay solamente $2$ objetos en la poblacion</b>. cuando se extrae uno de ellos, 
+            <p><b>(Situación extrema $1$)</b> Supongamos que  <b>hay solamente $2$ objetos en la poblacion</b>. cuando se extrae uno de ellos, 
               la selección de un  segundo proporciona la información completa de la población original
               si el primero no fue remplazado.</p>
             
-            <p><b>(Situación $2$)</b> Por otro lado, si una <b>población es muy grande con respecto al tamaño de la muestra que 
+            <p><b>(Situación extrema $2$)</b> Por otro lado, si una <b>población es muy grande con respecto al tamaño de la muestra que 
               va a ser extraida</b>, es prácticamente lo mismo si los objetos extraidos son o no  remplazados; 
               en este caso  el <b>muestreo sin remplazo se convierte en muesteo con remplazo cuando el tamaño 
               de la población es infinito</b>.      
@@ -332,17 +332,17 @@
           <b>distribuciones marginales de las observaciones individuales</b>, porque en ambos casos 
           estas <b>observaciones son identicamente distribuidas</b>. </p>
           
-          <p>Sin embargo, en el <b>caso $1$</b> el resultado de cualquier observación no esta afectado por lo resultados 
+          <p>Sin embargo, en el <b>caso $2$</b> el resultado de cualquier observación no esta afectado por lo resultados 
           de cualesquiera otras observaciones; las <b>observaciones son fenomenos aleatorios 
-          independientes</b>. En el <b>caso $2$</b>, las observaciones no son independientes.      
+          independientes</b>. En el <b>caso $1$</b>, las observaciones no son independientes.      
         </p>
       </div>
 
       <div class="nota-box"><h2 class="number-title"> Nota</h2>
-      <p>Existe <b>otra situación que ocurre frecuentemente</b>, distinta de $1$ y $2$, en los cuales los 
-        resultados son matematicamente del mismo tipo que $1$:         
+      <p>Existe <b>otra situación que ocurre frecuentemente</b>, distinta de los casos $1$ y $2$ previamente explicados, en los cuales los 
+        resultados son matematicamente del mismo tipo que el caso $1$:         
       </p>
-      <p><b>(Situación  $3$) </b> Las <b>observaciones</b> se obtienen como resultado de <b>realizaciones independientes</b> 
+      <p><b>(Caso  $3$) </b> Las <b>observaciones</b> se obtienen como resultado de <b>realizaciones independientes</b> 
         repetidas de un experimento, <b>bajo condiciones que son identicas</b> con respecto a los factores que
         pueden ser   controlados.
       </p>
