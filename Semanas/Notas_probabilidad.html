@@ -680,6 +680,22 @@
         </p>
       </div>
 
+      
+
+      <h1 class="title flexbox_">  Distribucion conjunta</h1>
+
+      <div class="nota-box" id="def:distribucion_conjunta"><h2 class="number-title"> Definición </h2>
+      <p> Sean $X_1, X_2\ldots,  X_n$ variables  aleatorias. Se define la <b>función de distribución conjunta</b> de $X_1, \ldots,  X_n$ como la función 
+        $F \colon \mathbb{R}^{n} \to [0,1]$ que se denota y definida por:
+        $$F_{X_{1},  \ldots, X_{n}}( \vec{x}):= \mathbb{P}(X_{1} \leq x_{1},  \ldots, X_{n} \leq x_{n})$$
+        donde $\vec{x}:=(x_{1}, \ldots, x_{n})  \in \mathbb{R}^{n}$
+      </p>
+      <!-- <p>A la medida de probabilidad aleatoria $\mathbb{P}_{X_1, X_2\ldots,  X_n} (B)$ inducida por las variables aleatorias 
+        $X_1, X_2\ldots,  X_n$ se le conoce como la <b>distribución conjunta de $X_1, X_2\ldots,  X_n$</b>
+      </p> -->
+      </div>
+
+
       <h1 class="title flexbox_">  Distribuciones marginales</h1>
 
       <div class="nota-box"><h2 class="number-title"> Definición </h2>
@@ -714,7 +730,7 @@
           </p>
         </div>
 
-        <h1 class="title flexbox_">Densidad de un vector Gaussiano</h1>
+        <h1 class="title flexbox_"> Densidad de un vector Gaussiano</h1>
 
         
         <div class="nota-box"><h2 class="number-title"> Proposición</h2>
@@ -728,6 +744,20 @@
           </p>
         </div>
 
+        <div class="nota-box"><h2 class="number-title"> Nota</h2>
+        <p>Cuando las componentes del vector aleatorio  $X=(X_1, X_2\ldots,  X_n)$ no son independientes entonces se tiene el siguiente resultado:</p>
+        </div>
+
+        <div class="nota-box"><h2 class="number-title"> Teorema</h2>
+          <p>Sea  $X=(X_1, X_2\ldots,  X_n)$ un vector aleatorio <b>Gaussiano</b> con $\mu=\mathbb{E}(X)$ 
+            y matriz de covarianza denotada por $\Lambda_{X}$. Si $\Lambda_{X}$ es invertible, entonces $X$ damite la
+            siguiente funcion de densidad:
+            
+            $$f(x) = \displaystyle{ \frac{1}{(2\pi)^{\frac{n}{2}}\left( \mathrm{det}(\Lambda_{X})\right)^{\frac{1}{2}}}}  \exp\left(\displaystyle{-\frac{1}{2} (x-\mu)^{T}\Lambda_{X}^{-1}} (x-\mu)\right) $$
+            para todo $x\in \mathbb{R}^{d}$
+
+          </p>
+        </div>
 
 
 
