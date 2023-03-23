@@ -114,10 +114,85 @@
           <p>Supongamos que deseamos estudiar la talla y el peso de los individuos de una población. Considermos entonces
             la variable aleatoria bidimensimensional $(X,Y)$ que asocia tales a características a uno de los individuos de la población. 
             Por  argumentos similarmente al <a href="#ejemplo_accidentes">Ejemplo 2.1</a>, supongamos que su distribución teórica es 
-            normal bidimensional, con funcion de densidad $f_{\theta}(x,y)$
-            <!-- $$f_{\theta}(x,y):= \frac{1}{2\pi \sigma_{1} \sigma_{2}}\cdot \exp\left( \displaystyle{-\frac{1}{2(1-\rho^{2})}\left[\displaystyle{ \frac{(x-\mu_{1})^{2}}{\sigma_{1}^{2}}-\frac{2\rho (x-\mu_{1})(x-\mu_{2})}{\sigma_{1}\sigma_{2}} + \frac{(y-\mu)^{2}}{\sigma^{2}_{2}} }  \right]}\right) $$ -->
+            normal bidimensional, con funcion de densidad: 
+          <!-- $f_{\theta}(x,y)$ -->
+             $$f_{\theta}(x,y):= \frac{1}{2\pi \sigma_{1} \sigma_{2}\sqrt{1-\rho^{2}}}\cdot \exp\left( \displaystyle{-\frac{1}{2(1-\rho^{2})}\left[\displaystyle{ \frac{(x-\mu_{1})^{2}}{\sigma_{1}^{2}}-\frac{2\rho (x-\mu_{1})(x-\mu_{2})}{\sigma_{1}\sigma_{2}} + \frac{(y-\mu)^{2}}{\sigma^{2}_{2}} }  \right]}\right) $$ 
+
           </div>
     
+          <div class="nota-box"><h2 class="number-title"> Observación</h2>
+            <p>Como puede observarse en los ejemplos anteriores, <em>la distribución 
+              de la muestra</em> suele manejarse a traves de la correspondiente funcion 
+              de probabilidad o de densidad (según sea el caso, si la distribución poblacional 
+              es discreta o continua) que proporciona la probabilidad o densidad de 
+              probabilidad con que puede presentarse cada muestra concreta, 
+              al llevar a cabo el muestreo.
+            </p>
+            <p>En general, dicha función de probabilidad o de densidad será denotada por 
+              $f_{\theta}(x_{1}, \ldots, x_{n})$
+             </p>
+          </div>
+
+
+          <div class="nota-box"><h2 class="number-title"> Definición</h2>
+            <p>En un sentido totalmente distinto, se puede asociar a cada muestra concreta 
+            $$(x_{1}, \ldots, x_{n})$$
+            una distribución muestral con la pretensión de emular a la distribución teórica $F$, 
+            a partir de únicamente de la información contenida en los $n$ valores númericos que componen 
+            la muestra .</p>
+            <p> Por lo tanto, se define la <b>distribución muestral asociada a la muestra
+            $(x_{1}, \ldots, x_{n})$ </b> de $X$ como:
+            $$F_{n}^{\ast}(x):= \frac{\text{ número de elementos muestrales } \leq x}{n} $$
+            para cada $x\in \mathbb{R}$, es decir, $F_{n}^{\ast}(x)$ es la frecuencia de elementos de la muestra 
+            que son menores o iguales a $x$. 
+            </p>         
+          </div>
+
+        <div class="nota-box"><h2 class="number-title"> Observación</h2>
+        <p> La representación gráfica de la distribución muestral es de la forma:</p>
+        <p>
+          <div class="flexbox">
+            <img src="../Imagenes/distribucion_muestral.png" alt="", width="80%" height="auto">
+            </div>
+        </p>
+        <p>con saltos de magnitud $\frac{1}{n}$ en los sucesivos valores muestrales
+          ordenados de menor a mayor, en el caso de que sean distintos y saltos multiples 
+          en el caso de que varios valores muestrales coincidieran. 
+        </p>
+        <p>
+          En este sentido y desde este enfoque  la distribución muestral es siempre una 
+          distribución discreta, concentrada en los valores que aparecen en la muestra y 
+          cuya función de probabilidad es:
+          $$p^{\ast}(x):= \frac{j}{n}, \text{ si $j$ valores muestrales coinciden con $x$}$$
+          para cada $x\in \mathbb{R}$.
+        </p>
+        </div>
+
+        <div class="nota-box"><h2 class="number-title"> Observación</h2>
+        <p>Como se puede apreciar la <b>distribución muestral $F_{n}^{\ast}(x)$</b> refleja exclusivamente, 
+          de una manera peculiar, <b>los valores númericos contenidos en la muestra concreta a la 
+          que está asociada</b> y <b>no tiene relación directa con la distribución de la muestra 
+          ni con distribucion de la población</b>.
+          <!-- en el sentido de que una muestra determinada tendría
+        la misma distribución muestral fuese cual fuese la población de origen. -->
+        </p>
+        <p>Pese a ello, es muy razonable esperar que la distribución muestral roporcione una imagen aproximada, 
+          más o menos "tosca", de la distribución de la población de la que se haya extraido la muestra. 
+        </p>
+
+        <p>Las leyes del azar juegan a nuestro favor, haciendo mas verosímil, en caso
+           de que el tamaño de la muestra sea muy grand; una situacion del tipo:
+        </p>
+           <p>
+            <div class="flexbox">
+              <img src="../Imagenes/distribucion_muestral_aprox.png" alt="", width="80%" height="auto">
+              </div>
+          </p>
+        <p>en el que la distribución muestral esta muy aproximada a la distribución de la población, que aquellas en las que ocurre 
+          lo contrario. 
+        </p>
+        </div>
+
   
   
 </body>
