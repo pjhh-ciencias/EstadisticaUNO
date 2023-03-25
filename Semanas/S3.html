@@ -163,7 +163,7 @@
           En este sentido y desde este enfoque  la distribución muestral es siempre una 
           distribución discreta, concentrada en los valores que aparecen en la muestra y 
           cuya función de probabilidad es:
-          $$p^{\ast}(x):= \frac{j}{n}, \text{ si $j$ valores muestrales coinciden con $x$}$$
+          $$p_{n}^{\ast}(x):= \frac{j}{n}, \text{ si $j$ valores muestrales coinciden con $x$}$$
           para cada $x\in \mathbb{R}$.
         </p>
         </div>
@@ -191,6 +191,59 @@
         <p>en el que la distribución muestral esta muy aproximada a la distribución de la población, que aquellas en las que ocurre 
           lo contrario. 
         </p>
+        </div>
+
+        <div class="nota-box"><h2 class="number-title"> Observación</h2>
+          <p>
+            El concepto de distribución muestral se extiende facilmente al caso de 
+            muestras de una población con mayor número de dimensiones. Por ejemplo 
+            si $\{(x_{1},y_{1}), (x_{2},y_{2}), \ldots, (x_{n},y_{n}) \}$ es una
+            muestra aleatoria de una variable bidimensional, la distibución 
+            muestral la distribución sobre el plano $\mathbb{R}^{2}$  
+            que tiene como funcion de probabilidad:
+            $$p_{n}^{\ast}(x,y):= \frac{j}{n}, \text{ si $j$ valores muestrales $(x_{i},y_{i})$ 
+            coinciden con $(x,y)$}$$
+            para cada $(x,y)\in \mathbb{R}^{2}$. 
+          </p>
+        </div>
+
+        <div class="nota-box"><h2 class="number-title"> Definición</h2>
+          <p>El conjunto de todos los posibles  valores 
+            que puede una muestra aleatoria $X_{1}, X_{2}, \ldots, X_{n}$ 
+            de una cierta población de un tamaño determinado,
+            se denomina <b>espacio muestral</b> y se denotá por $\mathcal{X}$.
+          </p>
+        </div>
+
+        <div class="nota-box"><h2 class="number-title"> Ejemplo</h2>
+          <p>Si se trata de una muestra aleatoria, de tamaño $n$, 
+            de una muestra aleatoria unidimensional, el epacio muestral será $\mathbb{R}^{n}$
+            o algún subconjunto suyo; en el caso de que la poblacion fuese bidimensional, 
+            el espacio muestral sería $\mathbb{R}^{2n}$ o algún subconjunto suyo, etc.
+          </p>
+
+          <p>Por lo tanto, en los ejemlos anteriores los espacios muestrales son:
+            <ol>
+              <li>$\mathcal{X}=\{(1,1,1), (1,1,0),(1,0,1),(1,0,0),(0,1,1),(0,1,0),(0,0,1),(0,0,0) \}$</li><br>
+              <li>$\mathcal{X}=\left(\mathbb{N} \cup \{0\}\right)^{n}\subseteq \mathbb{R}^{n}$</li><br>
+              <li>$\mathcal{X}=\mathbb{R}^{2n}$</li>
+            </ol>
+
+          </p>
+          <p>En cualquier caso, se trata siempre de un subconjunto de un espacio Euclideano $\mathbb{R}^{n\cdot m}$,
+            de manera que podamos considerar en $\mathcal{X}$ la sigma-álgebra de Borel
+            restringida $\mathcal{B}^{m\cdot n}$, que denotaremos unicamente por $\mathcal{B}$. 
+          </p>
+          <p>Obviamente, la distribución de la muestra determina una medida de probabilidad, 
+            $\mathcal{P}$ en el espacio $(\mathcal{X}, \mathcal{B})$, que permite 
+            expresar las probabilidades de sucesos relativos a la muestra: 
+            $$\mathcal{P}((X_{1},\ldots,X_{n}) \in B)$$
+            para cada $B \in \mathcal{B}$.
+          </p>
+          <p>
+
+            0
+          </p>
         </div>
 
   
