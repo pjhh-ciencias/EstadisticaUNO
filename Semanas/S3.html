@@ -129,7 +129,7 @@
               al llevar a cabo el muestreo.
             </p>
             <p>En general, dicha función de probabilidad o de densidad será denotada por 
-              $f_{\theta}(x_{1}, \ldots, x_{n})$
+              $f_{\theta}(x_{1}, \ldots, x_{n})$ o  por $f(x_{1}, \ldots, x_{n}; \theta)$
              </p>
           </div>
 
@@ -160,7 +160,7 @@
           en el caso de que varios valores muestrales coincidieran. 
         </p>
         <p>
-          En este sentido y desde este enfoque  la distribución muestral es siempre una 
+          <b>En este sentido y desde este enfoque</b>  la distribución muestral es siempre una 
           distribución discreta, concentrada en los valores que aparecen en la muestra y 
           cuya función de probabilidad es:
           $$p_{n}^{\ast}(x):= \frac{j}{n}, \text{ si $j$ valores muestrales coinciden con $x$}$$
@@ -176,12 +176,13 @@
           <!-- en el sentido de que una muestra determinada tendría
         la misma distribución muestral fuese cual fuese la población de origen. -->
         </p>
-        <p>Pese a ello, es muy razonable esperar que la distribución muestral roporcione una imagen aproximada, 
-          más o menos "tosca", de la distribución de la población de la que se haya extraido la muestra. 
+        <p>Pese a ello, es muy razonable esperar que <b>la distribución muestral proporcione una
+          imagen aproximada, más o menos "tosca", de la distribución de la población de la que 
+          se haya extraido la muestra</b>. 
         </p>
 
         <p>Las leyes del azar juegan a nuestro favor, haciendo mas verosímil, en caso
-           de que el tamaño de la muestra sea muy grand; una situacion del tipo:
+           de que el tamaño de la muestra sea muy grande; una situación del tipo:
         </p>
            <p>
             <div class="flexbox">
@@ -195,16 +196,22 @@
 
         <div class="nota-box"><h2 class="number-title"> Observación</h2>
           <p>
-            El concepto de distribución muestral se extiende facilmente al caso de 
-            muestras de una población con mayor número de dimensiones. Por ejemplo 
+            El <b>concepto de distribución muestral se extiende facilmente al caso de 
+            muestras de una población con mayor número de dimensiones</b>. </p>
+            
+            <p>Por ejemplo 
             si $\{(x_{1},y_{1}), (x_{2},y_{2}), \ldots, (x_{n},y_{n}) \}$ es una
             muestra aleatoria de una variable bidimensional, la distibución 
-            muestral la distribución sobre el plano $\mathbb{R}^{2}$  
-            que tiene como funcion de probabilidad:
+            muestral es la distribución sobre el plano $\mathbb{R}^{2}$  
+            que tiene como función de probabilidad:
             $$p_{n}^{\ast}(x,y):= \frac{j}{n}, \text{ si $j$ valores muestrales $(x_{i},y_{i})$ 
             coinciden con $(x,y)$}$$
-            para cada $(x,y)\in \mathbb{R}^{2}$. 
+            para cada $(x,y)\in \mathbb{R}^{2}$. O en términos de la función de distribución:
+            $$F_{n}^{\ast}(x,y):= \frac{1}{n}\cdot left(\text{ número de valores muestrales 
+            $(x_{i},y_{i})$  con $x_{i}\leq x$ y $y_{i}\leq y$}$$
+            para cada $(x,y) \in \mathbb{R}^{2}$
           </p>
+
         </div>
 
         <div class="nota-box"><h2 class="number-title"> Definición</h2>
@@ -217,7 +224,7 @@
 
         <div class="nota-box"><h2 class="number-title"> Ejemplo</h2>
           <p>Si se trata de una muestra aleatoria, de tamaño $n$, 
-            de una muestra aleatoria unidimensional, el epacio muestral será $\mathbb{R}^{n}$
+            de una muestra aleatoria unidimensional, el espacio muestral será $\mathbb{R}^{n}$
             o algún subconjunto suyo; en el caso de que la poblacion fuese bidimensional, 
             el espacio muestral sería $\mathbb{R}^{2n}$ o algún subconjunto suyo, etc.
           </p>
@@ -240,10 +247,15 @@
             $$\mathcal{P}((X_{1},\ldots,X_{n}) \in B)$$
             para cada $B \in \mathcal{B}$.
           </p>
-          <p>
-
-            0
+          <p>En el contexto de los problemas  paramétricos, suele ponerse el parametro 
+            como subíndice: $\mathcal{P}_{\theta}$, para indicar que se trata de la distribución 
+          de la muestra, asociada a la distribución teórica $F_{\theta}$ 
           </p>
+          
+        </div>
+
+        <div class="nota-box"><h2 class="number-title"> Observación</h2>
+          
         </div>
 
   
