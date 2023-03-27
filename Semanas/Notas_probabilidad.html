@@ -374,7 +374,7 @@
           se define:
         </p>
 
-        <p>\[ X(\omega) = \text{# de $\mathrm{A}$&#8217;s en $\omega$}. \]</p>
+        <p>\[ X(\omega) = \text{ de $\mathrm{A}$&#8217;s en $\omega$}. \]</p>
 
         <p>De este modo, se tiene que</p>
 
@@ -709,7 +709,7 @@
       <h1 class="title flexbox_">  Vectores Gaussianos</h1>
 
       <div class="nota-box"><h2 class="number-title"> Definición </h2>
-        <p>Un vector aleatorio $X=(X_1, X_2\ldots,  X_n)$ definido en un espacio de probabilidad $(\Omega, \mathscr{F},\mathbb{P})$
+        <p>Un vector aleatorio $X=(X_1,\ldots,  X_n)$ definido en un espacio de probabilidad $(\Omega, \mathscr{F},\mathbb{P})$
           es <b>Gaussiano</b> si toda combinación lineal de sus componentes es una variable aleatoria Gaussiana. Esto es, para 
           cualesquiera $\alpha_{1},\ldots,\alpha_{n}\in \mathbb{R}$ la variables aleatoria 
           $$\alpha_{1} X_{1} + \alpha_{2} X_{2} + \cdots + \alpha_{n} X_{n} $$
@@ -721,14 +721,73 @@
         <div class="nota-box"><h2 class="number-title"> Proposición</h2>
           <p>
             <ol>
-              <li>Si  $X=(X_1, X_2\ldots,  X_n)$ es un vector aleatoria Gaussiano, entonces para cada $i=1,\ldots,n$ la variable aleatoria 
+              <li>Si  $X=(X_1,\ldots,  X_n)$ es un vector aleatoria Gaussiano, entonces para cada $i=1,\ldots,n$ la variable aleatoria 
                 $X_{i}$ es Gaussiana.</li><br>
-                <li>Si $X_1, X_2\ldots,  X_n$ son variables aleatorias reales  Gaussianas  e 
-                  independientes, entonces el vector $X=(X_1, X_2\ldots,  X_n)$ es un vector Gaussiano.
+                <li>Si $X_1, \ldots,  X_n$ son variables aleatorias reales  Gaussianas  e 
+                  independientes, entonces el vector $X=(X_1, \ldots,  X_n)$ es un vector Gaussiano.
                 </li>
             </ol>
           </p>
         </div>
+
+        <div class="nota-box"><h2 class="number-title"> Observación</h2>
+          <p>Recordemos que la media y la varianza caracterizan a la distribución de una variable aleatoria 
+            (unidimensional). En el caso multidimensional, la media (la cual ahora es un vector) y 
+            la <em>matriz de covarianzas</em>  van a determinar completamente la distribución de un vector Gaussiano.
+          </p>
+          
+        </div>
+
+        <div class="nota-box"><h2 class="number-title"> Definición</h2>
+          <p>Si $X$ una variable aleatoria. Se define la <b>varianza  o dispersión$ de  $X$</b> como:
+          $$\mathrm{Var}(X):= \mathbf{E}[(X -\mu_{X})^{2}]=\mathbf{E}(X) - \mu_{X}^{2}  $$
+          donde $\mu_{X}=\mathbf{E}(X)$.
+         </p>
+          
+        </div>
+
+        <div class="nota-box"><h2 class="number-title"> Definición</h2>
+          <p>Si $X,Y$ variables aleatorias. Se define la <b>covarianza entre $X$ y $Y$</b> como 
+            la cantidad:
+          $$\mathrm{Cov}(X,Y):= \mathbf{E}[(X -\mu_{X})(Y -\mu_{Y}) ] $$
+          donde $\mu_{X}=\mathbf{E}(X)$ y $\mu_{Y}:= \mathbf{E}(Y)$
+         </p>
+          
+        </div>
+
+
+        <div class="nota-box"><h2 class="number-title"> Definición</h2>
+          <p>Si $X,Y$ variables aleatorias. Se define el  <b>coeficiente de correlación entre $X$ y $Y$</b> como 
+            la cantidad:
+          \begin{align*}
+          \rho =\mathrm{Corr}(X,Y)
+          := \frac{\mathrm{Cov}(X,Y)}{\sqrt{\mathrm{Var}(X)\cdot \mathrm{Var}(Y) }}
+          =\frac{\mathbf{E}[(X -\mu_{X})(Y -\mu_{Y})]}{\sqrt{\mathbf{E}[(X -\mu_{X})^{2}]\mathbf{E}[(Y -\mu_{Y})^{2}}]}
+          \end{align*}
+          donde $\mu_{X}=\mathbf{E}(X)$ y $\mu_{Y}:= \mathbf{E}(Y)$
+    
+         </p>
+          
+        </div>
+
+
+        <div class="nota-box"><h2 class="number-title"> Definición</h2>
+          <p>Si $X=(X_1,\ldots,  X_n)$ es un vector aleatorio, entonces
+            <ol>
+              <li>La <b>media del vector aleatoria</b> $X$ se define como:
+                $$\mathbf{E}(X):= (\mathbf{E}(X_1),\ldots, \mathbf{E} (X_n))$$
+              </li><br>
+              <li><b>La matriz de covarianzas</b> del vector aleatorio $X$ se denota por $\left( \Lambda_{X}(i,j) \right)_{i,j = 1,\ldots,n}$ 
+                y para cualesquiera $i,j=1,2,\ldots,n$ se define la entrada $(i,j)$ de la matriz $\Lambda_{X}$ como:
+                $$\Lambda_{X}(i,j):= \mathrm{Cov}(X_{i}, X_{j})$$   
+                
+              </li>
+
+            </ol>
+          </p>
+          
+        </div>
+
 
         <h1 class="title flexbox_"> Densidad de un vector Gaussiano</h1>
 
@@ -739,7 +798,7 @@
             $$X_{i}\sim \mathrm{N}(\mu_{i},\sigma_{i}^{2})$$
             Entonces la funcion de densidad del vector $X$ esta dada por:
             
-            $$f(x_{1},\ldots,x_{n}) = \displaystyle{ \frac{1}{(2\pi)^{\frac{n}{2}}\sigma_{1} \cdot \sigma_{2} \cdots \sigma_{n}}  }  \exp\left( \displaystyle{-\left[\displaystyle{ \frac{(x-\mu_{1})^{2}}{2\sigma_{1}^{2}} + \frac{(x-\mu_{2})^{2}}{2\sigma_{2}^{2}} + \cdots + \frac{(x-\mu_{n})^{2}}{2\sigma_{n}^{2}}  }\right]}\right) $$
+            $$f(x_{1},\ldots,x_{n}) = \displaystyle{ \frac{1}{(2\pi)^{\frac{n}{2}}\sigma_{1} \cdots \sigma_{n}}  }  \exp\left( \displaystyle{-\left[\displaystyle{ \frac{(x-\mu_{1})^{2}}{2\sigma_{1}^{2}}  + \cdots + \frac{(x-\mu_{n})^{2}}{2\sigma_{n}^{2}}  }\right]}\right) $$
 
           </p>
         </div>
@@ -750,11 +809,11 @@
 
         <div class="nota-box"><h2 class="number-title"> Teorema</h2>
           <p>Sea  $X=(X_1, X_2\ldots,  X_n)$ un vector aleatorio <b>Gaussiano</b> con $\mu=\mathbb{E}(X)$ 
-            y matriz de covarianza denotada por $\Lambda_{X}$. Si $\Lambda_{X}$ es invertible, entonces $X$ damite la
-            siguiente funcion de densidad:
+            y matriz de covarianza denotada por $\Lambda_{X}$. Si $\Lambda_{X}$ es invertible, entonces 
+            $X$ admite la  siguiente funcion de densidad:
             
             $$f(x) = \displaystyle{ \frac{1}{(2\pi)^{\frac{n}{2}}\left( \mathrm{det}(\Lambda_{X})\right)^{\frac{1}{2}}}}  \exp\left(\displaystyle{-\frac{1}{2} (x-\mu)^{T}\Lambda_{X}^{-1}} (x-\mu)\right) $$
-            para todo $x\in \mathbb{R}^{d}$
+            para todo $x\in \mathbb{R}^{}$
 
           </p>
         </div>
