@@ -83,15 +83,10 @@
       <!-- This part is for title in tab-->
       <title> Semana 3   </title>
     
-         </head>
-
-
+      </head>
 
       <body class="fondo-body" > <h1 class="number-title flexbox"> Semana 3 </h1>   
     
-     
-        
-        
     <div class="nota-box"><h2 class="number-title"> Ejemplo</h2>
       <p>Supongamos que estamos interesados en conocer la distribución de obtener cara al lanzar una cierta moneda</b>.</p>
       </div>
@@ -116,7 +111,7 @@
             Por  argumentos similarmente al <a href="#ejemplo_accidentes">Ejemplo 2.1</a>, supongamos que su distribución teórica es 
             normal bidimensional, con funcion de densidad: 
           <!-- $f_{\theta}(x,y)$ -->
-             $$f_{\theta}(x,y):= \frac{1}{2\pi \sigma_{1} \sigma_{2}\sqrt{1-\rho^{2}}}\cdot \exp\left( \displaystyle{-\frac{1}{2(1-\rho^{2})}\left[\displaystyle{ \frac{(x-\mu_{1})^{2}}{\sigma_{1}^{2}}-\frac{2\rho (x-\mu_{1})(x-\mu_{2})}{\sigma_{1}\sigma_{2}} + \frac{(y-\mu)^{2}}{\sigma^{2}_{2}} }  \right]}\right) $$ 
+            $$f_{\theta}(x,y):= \frac{1}{2\pi \sigma_{1} \sigma_{2}\sqrt{1-\rho^{2}}}\cdot \exp\left( \displaystyle{-\frac{1}{2(1-\rho^{2})}\left[\displaystyle{ \frac{(x-\mu_{1})^{2}}{\sigma_{1}^{2}}-\frac{2\rho (x-\mu_{1})(x-\mu_{2})}{\sigma_{1}\sigma_{2}} + \frac{(y-\mu)^{2}}{\sigma^{2}_{2}} }  \right]}\right) $$ 
 
           </div>
     
@@ -130,7 +125,7 @@
             </p>
             <p>En general, dicha función de probabilidad o de densidad será denotada por 
               $f_{\theta}(x_{1}, \ldots, x_{n})$ o  por $f(x_{1}, \ldots, x_{n}; \theta)$
-             </p>
+            </p>
           </div>
 
 
@@ -254,9 +249,67 @@
           
         </div>
 
-        <div class="nota-box"><h2 class="number-title"> Observación</h2>
+        <h1 class="title flexbox_"> Estadisticos y su distribución en el muestreo</h1>
+
+
+        <div class="nota-box"><h2 class="number-title"> Introducción</h2>
+          <p>Aunque todavia no sa hayan concretado con precisión  los problemas que pretende resolver la Inferencia 
+            Estadistica, sí se puede precisar cual ha de ser el instrumento empleado para su solución. 
+          </p>
+          <p>
+            Si a partir de una muestra aleatoria $(x_{1}, \ldots, x_{n})$ se desea disminuir el desconocimiento acerca 
+            de la distribucion de la poblacion, sea lo que sea lo que haya que hacer, habra de hacerse en función
+            de los resultados observados en la muestra. En otras palabras, cualquiera que sea el método  
+            de inferencia que se utilice, tendra que estar basado en una función $T(x_{1}\ldots,x_{n})$ de los 
+            valores muestrales.
+          </p>
+        </div>
+
+        
+        <div class="nota-box"><h2 class="number-title"> Definición</h2>
+          <p>Se le llama <b>estadístico</b> o <b>estadística</b> a cualquier función $T$ del espacio muestral $(\mathcal{X}, \mathcal{B})$ 
+            en un espacio euclídeano $(\mathbb{R}^{n},\mathbb{B}^{k})$  que sea medible (respecto a las $\sigma$-álgebras
+            $\mathcal{B}$ y $\mathbb{B}^{k}$). La dimensión $k$ del espacio euclideano imagen se denomina <b>dimension del
+            estadístico.</b>
+          </p> 
+          <p>En otras palabras, una estadistica es una función de la muestra aleatoria $T(X_{1}, \ldots, X_{n})$.</p>
           
         </div>
+
+        <div class="nota-box"><h2 class="number-title"> Observación</h2>
+          <p>La importancia de señar la medibilidad de un estadístico es enfatizar en el hecho de que 
+            las estadísticas son variables aleatorias, puesto que no es posible anticipar el valor que tomarán 
+            al obtener observaciones concretas. o anterior tiene la implicación de que será necesario considerar 
+            la función de densidad (o de distribución) de las estadísticas, lo que a su vez permitirá calcular
+            sus caracteristicas tales como la esperanza o la varianza. En este contexto, es común hablar de 
+            la distruibución muestral de una estadística $T(X_{1}, \ldots, X_{n})$ al referirse a 
+            la distribución de la variable aleatoria $T(X_{1}, \ldots, X_{n})$. 
+          </p>
+        </div>
+
+        <div class="nota-box"><h2 class="number-title"> Nota</h2>
+          <p>Entre las estadísticas más comunes que se utilizarán en procedimientos de inferencia destacan la media 
+            muestral y las estadísticas de orden. A continuación se enlistan algunas de estas funciones de la 
+            muestra aleatoria con su respectiva notación.
+          </p>
+          <ol>
+            <li> Media aritmética de la muestra o  media muestral
+              $$T(X_{1}, \ldots, X_{n}) = \displaystyle{\frac{ \displaystyle{\sum_{i=1}^{n} X_{i}}}{n}}:=\overline{X}$$
+            </li>
+            <li> Varianza muestral
+                $$T(X_{1}, \ldots, X_{n}) = \displaystyle{\frac{ \displaystyle{\sum_{i=1}^{n} (X_{i} - \overline{X})^{2}}}{n}}:=S^{2}$$
+            </li>
+            <li> Mínima estadística de orden
+              $$T(X_{1}, \ldots, X_{n}) = \min\{X_{1}, \ldots, X_{n}\}:=X_{(1)}$$
+            </li>
+            <li> Máxima estadística de orden
+              $$T(X_{1}, \ldots, X_{n}) = \max\{X_{1}, \ldots, X_{n}\}:=X_{(n)}$$
+            </li>
+            <li> $r$-ésimo momento muestral
+              $$T(X_{1}, \ldots, X_{n}) = \displaystyle{\frac{ \displaystyle{\sum_{i=1}^{n} X_{i}^{r}}}{n}}:=M_{r}$$</li>
+          </ol>
+        </div>
+
 
   
   
