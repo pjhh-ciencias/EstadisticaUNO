@@ -111,7 +111,7 @@
             Por  argumentos similarmente al <a href="#ejemplo_accidentes">Ejemplo 2.1</a>, supongamos que su distribución teórica es 
             normal bidimensional, con funcion de densidad: 
           <!-- $f_{\theta}(x,y)$ -->
-            $$f_{\theta}(x,y):= \frac{1}{2\pi \sigma_{1} \sigma_{2}\sqrt{1-\rho^{2}}}\cdot \exp\left( \displaystyle{-\frac{1}{2(1-\rho^{2})}\left[\displaystyle{ \frac{(x-\mu_{1})^{2}}{\sigma_{1}^{2}}-\frac{2\rho (x-\mu_{1})(x-\mu_{2})}{\sigma_{1}\sigma_{2}} + \frac{(y-\mu)^{2}}{\sigma^{2}_{2}} }  \right]}\right) $$ 
+            $$f_{\theta}(x,y):= \frac{1}{2\pi \sigma_{1} \sigma_{2}\sqrt{1-\rho^{2}}}\cdot \exp\left( \displaystyle{-\frac{1}{2(1-\rho^{2})}\left[\displaystyle{ \frac{(x-\mu_{1})^{2}}{\sigma_{1}^{2}}-\frac{2\rho (x-\mu_{1})(y-\mu_{2})}{\sigma_{1}\sigma_{2}} + \frac{(y-\mu)_{2}^{2}}{\sigma^{2}_{2}} }  \right]}\right) $$ 
 
           </div>
     
@@ -211,7 +211,7 @@
 
         <div class="nota-box"><h2 class="number-title"> Definición</h2>
           <p>El conjunto de todos los posibles  valores 
-            que puede una muestra aleatoria $X_{1}, X_{2}, \ldots, X_{n}$ 
+            que puede tomar una muestra aleatoria $X_{1}, X_{2}, \ldots, X_{n}$ 
             de una cierta población de un tamaño determinado,
             se denomina <b>espacio muestral</b> y se denotá por $\mathcal{X}$.
           </p>
@@ -276,16 +276,6 @@
           
         </div>
 
-        <div class="nota-box"><h2 class="number-title"> Observación</h2>
-          <p>La importancia de señar la medibilidad de un estadístico es enfatizar en el hecho de que 
-            las estadísticas son variables aleatorias, puesto que no es posible anticipar el valor que tomarán 
-            al obtener observaciones concretas. o anterior tiene la implicación de que será necesario considerar 
-            la función de densidad (o de distribución) de las estadísticas, lo que a su vez permitirá calcular
-            sus caracteristicas tales como la esperanza o la varianza. En este contexto, es común hablar de 
-            la distruibución muestral de una estadística $T(X_{1}, \ldots, X_{n})$ al referirse a 
-            la distribución de la variable aleatoria $T(X_{1}, \ldots, X_{n})$. 
-          </p>
-        </div>
 
         <div class="nota-box"><h2 class="number-title"> Nota</h2>
           <p>Entre las estadísticas más comunes que se utilizarán en procedimientos de inferencia destacan la media 
@@ -308,6 +298,20 @@
             <li> $r$-ésimo momento muestral
               $$T(X_{1}, \ldots, X_{n}) = \displaystyle{\frac{ \displaystyle{\sum_{i=1}^{n} X_{i}^{r}}}{n}}:=M_{r}$$</li>
           </ol>
+        </div>
+
+
+
+        <div class="nota-box"><h2 class="number-title"> Observación</h2>
+          <p>La condición de medibilidad que debe satisfacer un  estadístico es importante, 
+            ya que enfatiza en el hecho de que las estadísticas son variables aleatorias puesto
+            que no es posible anticipar el valor que tomarán 
+            al obtener observaciones concretas. o anterior tiene la implicación de que será necesario considerar 
+            la función de densidad (o de distribución) de las estadísticas, lo que a su vez permitirá calcular
+            sus caracteristicas tales como la esperanza o la varianza. En este contexto, es común hablar de 
+            la distruibución muestral de una estadística $T(X_{1}, \ldots, X_{n})$ al referirse a 
+            la distribución de la variable aleatoria $T(X_{1}, \ldots, X_{n})$. 
+          </p>
         </div>
 
 
